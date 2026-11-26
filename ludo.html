@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ludo board</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            background-color: black;
+        }
+        #main{
+            border: 3px solid black;
+            height: 500px;
+            width: 500px;
+            display: flex;
+            flex-direction:column;
+            z-index: 1;
+            background-color: white;
+        }
+        .container1{
+            height:200px;
+            width:100%;
+            border: 2px solid black;
+            display: flex;
+        }
+        .container2{
+            height:100px;
+            width:100%;
+            border: 1px solid black;
+            display: flex;
+        }
+        .container3{
+            height: 200px;
+            width:100%;
+            border: 2px solid black;
+            display: flex;
+        }
+        .container1 .inner1{
+            box-sizing: border-box;
+            width:40%;
+            height: 100%;
+            border:20px solid red;
+            z-index: -1;
+        }
+        .container1 .inner2{
+            width:20%;
+            height:100%;
+            box-sizing: border-box;
+            border:1px solid black;
+        }
+        .container1 .inner3{
+            box-sizing: border-box;
+            width:40%;
+            height: 100%;
+            border:20px solid green;
+            z-index: -1;
+        }
+        .container3 .inner1{
+            box-sizing: border-box;
+            width:40%;
+            height: 100%;
+            border:20px solid blue;
+            display: flex;
+            flex-direction: column;
+            z-index: -1;
+        }
+        .container3 .inner2{
+            width:20%;
+            height:100%;
+            box-sizing: border-box;
+            border:1px solid black;
+        }
+        
+        .container3 .inner3{
+            box-sizing: border-box;
+            width:40%;
+            height: 100%;
+            border:20px solid yellow;
+            
+        }
+        .container1 .inner1 .circle-row{
+            height:50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .container1 .inner1 .circle-row .circle{
+            height:25px;
+            width: 25px;
+            border-radius: 50%;
+            border: 5px solid red;
+        }
+
+
+        .container1 .inner3 .circle-row{
+            height:50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .container1 .inner3 .circle-row .circle{
+            height:25px;
+            width: 25px;
+            border-radius: 50%;
+            border: 5px solid green;
+        }
+       
+        
+        .container3 .inner1 .circle-row{
+            height:50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .container3 .inner1 .circle-row .circle{
+            height:25px;
+            width: 25px;
+            border-radius: 50%;
+            border: 5px solid blue;
+        }
+
+
+        .container3 .inner3 .circle-row{
+            height:50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .container3 .inner3 .circle-row .circle{
+            height:25px;
+            width: 25px;
+            border-radius: 50%;
+            border: 5px solid yellow;
+        }
+
+
+
+
+        .container1 .inner2{
+            display: flex;
+        }
+        .container1 .inner2 .col1{
+            width: 33%;
+            height: 100%;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+        }
+        .container1 .inner2 .col1 .normal{
+            height: 16.67%;
+            width: 100%;
+            border: 1px solid black;
+        }
+        .container1 .inner2 .col2{
+            width: 33%;
+            height: 100%;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+        }
+        .container1 .inner2 .col2 .normal{
+            height: 16.67%;
+            width: 100%;
+            border: 1px solid black;
+        }
+        .container1 .inner2 .col3{
+            width: 33%;
+            height: 100%;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+        }
+        .container1 .inner2 .col3 .normal{
+            height: 16.67%;
+            width: 100%;
+            border: 1px solid black;
+        }
+
+
+
+
+        .container3 .inner2{
+            display: flex;
+        }
+        .container3 .inner2 .col1{
+            width: 33%;
+            height: 100%;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+        }
+        .container3 .inner2 .col1 .normal{
+            height: 16.67%;
+            width: 100%;
+            border: 1px solid black;
+        }
+        .container3 .inner2 .col2{
+            width: 33%;
+            height: 100%;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+        }
+        .container3 .inner2 .col2 .normal{
+            height: 16.67%;
+            width: 100%;
+            border: 1px solid black;
+        }
+        .container3 .inner2 .col3{
+            width: 33%;
+            height: 100%;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+        }
+        .container3 .inner2 .col3 .normal{
+            height: 16.67%;
+            width: 100%;
+            border: 1px solid black;
+        }
+
+
+        .container2{
+            display: flex;
+            
+        }
+        .container2 .inner1{
+            height: 100%;
+            width: 40%;
+            border: 1px solid black;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+        }
+        .container2 .inner2{
+            height: 100%;
+            width: 20%;
+            border: 1px solid black;
+            box-sizing: border-box;
+            border-left: 3px solid black;
+        }
+        .container2 .inner3{
+            height: 100%;
+            width: 40%;
+            border: 1px solid black;
+            box-sizing: border-box;
+        }
+        .container2 .inner1 .row1{
+            width: 100%;
+            height: 33.33%;
+            border: 1px solid black;
+            display: flex;
+        }
+        .container2 .inner1 .row2{
+            width: 100%;
+            height: 33.33%;
+            border: 1px solid black;
+            display: flex;
+        }
+        .container2 .inner1 .row3{
+            width: 100%;
+            height: 33.33%;
+            border: 1px solid black;
+            display: flex;
+        }
+        .container2 .inner1 .row1 .normal{
+            height: 100%;
+            width: 16.67%;
+            border: 1px solid black;
+        }
+        .container2 .inner1 .row2 .normal{
+            height: 100%;
+            width: 16.67%;
+            border: 1px solid black;
+        }
+        .container2 .inner1 .row3 .normal{
+            height: 100%;
+            width: 16%;
+            border: 1px solid black;
+        }
+        .container2 .inner3 .row1{
+            width: 100%;
+            height: 33.33%;
+            border: 1px solid black;
+            display: flex;
+        }
+        .container2 .inner3 .row2{
+            width: 100%;
+            height: 33.33%;
+            border: 1px solid black;
+            display: flex;
+        }
+        .container2 .inner3 .row3{
+            width: 100%;
+            height: 33.33%;
+            border: 1px solid black;
+            display: flex;
+        }
+        .container2 .inner3 .row1 .normal{
+            height: 100%;
+            width: 16.67%;
+            border: 1px solid black;
+        }
+        .container2 .inner3 .row2 .normal{
+            height: 100%;
+            width: 16.67%;
+            border: 1px solid black;
+        }
+        .container2 .inner3 .row3 .normal{
+            height: 100%;
+            width: 16%;
+            border: 1px solid black;
+        }
+        .container2 .inner1 .speical{
+            background-color: red
+        }
+        .container2 .inner3 .speical{
+            background-color: yellow;
+            z-index: -2;
+        }
+        .container3 .inner2 .speical{
+            background-color: blue;
+            z-index: -2;
+        }
+        .container1 .inner2 .speical{
+            background-color: green;
+            z-index: -2;
+        }
+
+
+                .container2 .inner2 {
+            display: flex;
+            position: relative;
+        }
+
+        .container2 .inner2 .ludo-part {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .container2 .inner2 .triangle {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+
+        .container2 .inner2 .red {
+            background-color: green;
+            clip-path: polygon(0 0, 100% 0, 50% 50%);
+        }
+
+        .container2 .inner2 .green {
+            background-color: red;
+            clip-path: polygon(0 0, 0 100%, 50% 50%);
+        }
+
+        .container2 .inner2 .yellow {
+            background-color: blue;
+            clip-path: polygon(0 100%, 100% 100%, 50% 50%);
+        }
+
+        .container2 .inner2 .blue {
+            background-color: yellow;
+            clip-path: polygon(100% 0, 100% 100%, 50% 50%);
+        }
+        .safe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    -webkit-text-stroke: 1px black;
+    
+}
+    .container1 .safe{
+        color:green;
+    }
+    .container2 .inner1 .safe{
+        color:red;
+    }
+    .container2 .inner3 .safe{
+        color:yellow;
+    }
+    .container3 .safe{
+        color:blue;
+    }
+    </style>
+
+</head>
+
+<body>
+    <div id="main">
+        <div class="container1">
+
+            <div class="inner1">
+                <div class="circle-row">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-row">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                </div>
+            </div>
+
+            <div class="inner2">
+                    <div class="col1">
+                        <div class="normal"></div>
+                        <div class="normal"></div>
+                        <div class="normal safe">
+                            ★
+                        </div>
+                        <div class="normal"></div>
+                        <div class="normal"></div>
+                        <div class="normal"></div>
+                    </div>
+                    <div class="col2">
+                        
+                        <div class="normal"></div>
+                        <div class="normal speical"></div>
+                        <div class="normal speical"></div>
+                        <div class="normal speical"></div>
+                        <div class="normal speical"></div>
+                        <div class="normal speical"></div>
+                    </div>
+                    <div class="col3">
+                        <div class="normal"></div>
+                        <div class="normal speical"></div>
+                        <div class="normal"></div>
+                        <div class="normal"></div>
+                        <div class="normal"></div>
+                        <div class="normal"></div>
+                    </div>
+            </div>
+            <div class="inner3">
+                <div class="circle-row">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-row">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <div class="container2">
+            <div class="inner1">
+                <div class="row1">
+                    <div class="normal"></div>
+                    <div class="normal speical"></div>
+                    <div class="normal"></div>
+                    <div class="normal"></div>
+                    <div class="normal"></div>
+                    <div class="normal"></div>
+                </div>
+                <div class="row2">
+                    <div class="normal"></div>
+                    <div class="normal speical"></div>
+                    <div class="normal speical"></div>
+                    <div class="normal speical"></div>
+                    <div class="normal speical"></div>
+                    <div class="normal speical"></div>
+                </div>
+                <div class="row3">
+                    <div class="normal"></div>
+                    <div class="normal"></div>
+                    <div class="normal safe">
+                        ★
+                    </div>
+                    <div class="normal"></div>
+                    <div class="normal"></div>
+                    <div class="normal"></div>
+                </div>
+            </div>
+                        <div class="inner2">
+                <div class="ludo-part">
+                    <div class="triangle red"></div>
+                    <div class="triangle green"></div>
+                    <div class="triangle yellow"></div>
+                    <div class="triangle blue"></div>
+                </div>
+            </div>
+
+
+            <div class="inner3">
+                <div class="row1">
+                    <div class="normal"></div>
+                    <div class="normal"></div>
+                    <div class="normal"></div>
+                    <div class="normal safe">
+                        ★
+                    </div>
+                    <div class="normal"></div>
+                    <div class="normal"></div>
+                </div>
+                <div class="row2">
+                    <div class="normal speical"></div>
+                    <div class="normal speical"></div>
+                    <div class="normal speical"></div>
+                    <div class="normal speical"></div>
+                    <div class="normal speical"></div>
+                    <div class="normal"></div>
+                </div>
+                <div class="row3">
+                    <div class="normal"></div>
+                    <div class="normal"></div>
+                    <div class="normal"></div>
+                    <div class="normal"></div>
+                    <div class="normal speical"></div>
+                    <div class="normal"></div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+        <div class="container3">
+            <div class="inner1">
+                 <div class="circle-row">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-row">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                </div>
+            </div>
+            <div class="inner2">
+                <div class="col1">
+                        <div class="normal "></div>
+                        <div class="normal "></div>
+                        <div class="normal "></div>
+                        <div class="normal"></div>
+                        <div class="normal speical"></div>
+                        <div class="normal"></div>
+                    </div>
+                    <div class="col2">
+                        
+                        <div class="normal speical"></div>
+                        <div class="normal speical"></div>
+                        <div class="normal speical"></div>
+                        <div class="normal speical"></div>
+                        <div class="normal speical"></div>
+                        <div class="normal"></div>
+                    </div>
+                    <div class="col3">
+                        <div class="normal"></div>
+                        <div class="normal"></div>
+                        <div class="normal"></div>
+                        <div class="normal safe">
+                            ★
+                        </div>
+                        <div class="normal"></div>
+                        <div class="normal"></div>
+                    </div>
+            </div>
+            <div class="inner3">
+                 <div class="circle-row">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                </div>
+                <div class="circle-row">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

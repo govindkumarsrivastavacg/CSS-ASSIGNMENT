@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sudoku & Answer</title>
+    <style>
+      * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 40px 50px;
+  display: flex;
+  gap: 50px;
+}
+
+.game-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  margin-bottom: 16px;
+  color: #111;
+}
+
+table {
+  border-collapse: collapse;
+  border: 2.5px solid #000;
+}
+
+td {
+  width: 38px;
+  height: 38px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 20px;
+  color: #000;
+  border: 1px solid #333;
+}
+
+td:nth-child(3),
+td:nth-child(6) {
+  border-right: 2.5px solid #000;
+}
+
+tr:nth-child(3) td,
+tr:nth-child(6) td {
+  border-bottom: 2.5px solid #000;
+}
+
+.green {
+  background-color: #9ecbb2;
+}
+
+@media (max-width: 850px) {
+  .card {
+    flex-direction: column;
+    padding: 25px;
+    gap: 35px;
+  }
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="game-box">
+        <h2>SUDOKU</h2>
+        <table>
+          <tr>
+            <td>8</td>
+            <td></td>
+            <td>6</td>
+            <td class="green"></td>
+            <td class="green"></td>
+            <td class="green">3</td>
+            <td></td>
+            <td>9</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>4</td>
+            <td></td>
+            <td class="green"></td>
+            <td class="green">1</td>
+            <td class="green"></td>
+            <td></td>
+            <td>6</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td></td>
+            <td></td>
+            <td class="green">8</td>
+            <td class="green">7</td>
+            <td class="green"></td>
+            <td></td>
+            <td></td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td class="green">1</td>
+            <td class="green"></td>
+            <td class="green">8</td>
+            <td></td>
+            <td></td>
+            <td>5</td>
+            <td class="green">2</td>
+            <td class="green"></td>
+            <td class="green"></td>
+          </tr>
+          <tr>
+            <td class="green"></td>
+            <td class="green">3</td>
+            <td class="green"></td>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td class="green"></td>
+            <td class="green">5</td>
+            <td class="green"></td>
+          </tr>
+          <tr>
+            <td class="green">7</td>
+            <td class="green"></td>
+            <td class="green">5</td>
+            <td></td>
+            <td>3</td>
+            <td></td>
+            <td class="green">9</td>
+            <td class="green"></td>
+            <td class="green"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>2</td>
+            <td>1</td>
+            <td class="green"></td>
+            <td class="green"></td>
+            <td class="green">7</td>
+            <td></td>
+            <td>4</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td></td>
+            <td></td>
+            <td class="green"></td>
+            <td class="green">2</td>
+            <td class="green"></td>
+            <td>8</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td>8</td>
+            <td>7</td>
+            <td class="green">6</td>
+            <td class="green"></td>
+            <td class="green">4</td>
+            <td></td>
+            <td></td>
+            <td>3</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="game-box">
+        <h2>ANSWER</h2>
+        <table>
+          <tr>
+            <td>8</td>
+            <td>7</td>
+            <td>6</td>
+            <td class="green">5</td>
+            <td class="green">4</td>
+            <td class="green">3</td>
+            <td>1</td>
+            <td>9</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>4</td>
+            <td>3</td>
+            <td class="green">2</td>
+            <td class="green">1</td>
+            <td class="green">9</td>
+            <td>7</td>
+            <td>6</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>1</td>
+            <td>9</td>
+            <td class="green">8</td>
+            <td class="green">7</td>
+            <td class="green">6</td>
+            <td>4</td>
+            <td>3</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td class="green">1</td>
+            <td class="green">9</td>
+            <td class="green">8</td>
+            <td>7</td>
+            <td>6</td>
+            <td>5</td>
+            <td class="green">3</td>
+            <td class="green">2</td>
+            <td class="green">4</td>
+          </tr>
+          <tr>
+            <td class="green">4</td>
+            <td class="green">3</td>
+            <td class="green">2</td>
+            <td>1</td>
+            <td>9</td>
+            <td>8</td>
+            <td class="green">6</td>
+            <td class="green">5</td>
+            <td class="green">7</td>
+          </tr>
+          <tr>
+            <td class="green">7</td>
+            <td class="green">6</td>
+            <td class="green">5</td>
+            <td>4</td>
+            <td>3</td>
+            <td>2</td>
+            <td class="green">9</td>
+            <td class="green">8</td>
+            <td class="green">1</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>2</td>
+            <td>1</td>
+            <td class="green">9</td>
+            <td class="green">8</td>
+            <td class="green">7</td>
+            <td>5</td>
+            <td>4</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>5</td>
+            <td>4</td>
+            <td class="green">3</td>
+            <td class="green">2</td>
+            <td class="green">1</td>
+            <td>8</td>
+            <td>7</td>
+            <td>9</td>
+          </tr>
+          <tr>
+            <td>9</td>
+            <td>8</td>
+            <td>7</td>
+            <td class="green">6</td>
+            <td class="green">5</td>
+            <td class="green">4</td>
+            <td>2</td>
+            <td>1</td>
+            <td>3</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

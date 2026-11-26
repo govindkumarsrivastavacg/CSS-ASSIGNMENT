@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kidz-World</title>
+    <style>
+        *{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 0;
+    margin: 0;
+
+}
+.topbar{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    padding-left:25px;
+}
+.cart{
+    display: flex;
+    align-items: center;
+    padding-right:25px
+}
+.background{
+    width: 100%;
+    height: 30vw;
+    background-image: url(./assets/kw-background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.background p{
+    position: relative;
+    width: fit-content;
+    color: white;
+    font-size:600%;
+    top:25px;
+    left: 25px;
+    font-weight: bold;
+}
+.hash{
+    font-size: 30%;
+    position: relative;
+    font-weight: bolder;
+    top:-22px;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    margin-top: 7%;
+    margin-left: 4%;
+}
+.price-add{
+    display:flex;
+    gap:100px;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 0.9%;
+}
+
+.btn button{
+    display: flex;
+    background-color: rgba(71, 107, 227, 0.98);
+    border: none;
+    border-radius: 10%;
+    justify-content: center;
+    align-items: center;
+    padding: 12% 16% 12% 12%;
+    gap:0.5%
+}
+.price-add>.price{
+    font-weight: bolder;
+}
+.btn>button>p{
+    color: white;
+    font-size: large;
+    font-weight: bolder;
+}
+.card>p{
+    font-weight: bolder;
+}
+.card .author{
+    margin-top: 0.5%;
+    color: gray;
+    font-weight: bolder;
+}
+.books{
+    display: flex;
+    gap:1.5%
+}
+.books .card{
+    justify-content: center;
+    align-content: center;
+}
+
+.btn img{
+    width: 50%;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div class="main">
+    <div class="topbar">
+        <logo><img src="./assets/kw-logo.png" width="150"></logo>
+        <div class="cart"><img src="./assets/cart-icon.png" width="40"><h2>Cart items(0)</h2></div>
+    </div>
+    <div class="background"><p>Shop.<br>Have Fun.<br>Repeat.<br><span class="hash">#NewAndNow</span></p></div>
+    <div class="books">
+        <div class="card"><h2>Discover New Books</h2><img src='./assets/book1.png' width="200vw"><p>This was our pact</p>
+            <div class="author"><p>Ryan Andrews</p></div>
+            <div class="price-add">
+                <div class="price">
+                <p>$7.49</p>
+                </div>
+                <div class="btn">
+                <button><p>Add</p><img src="./assets/cart-icon-white.png"></button>
+                </div> 
+            </div>
+        </div>
+        <div class="card"><p><br></p><img src='./assets/book1.png' width="200vw"><p>This was our pact</p>
+            <div class="author"><p>Ryan Andrews</p></div>
+            <div class="price-add">
+                <div class="price">
+                <p>$7.49</p>
+                </div>
+                <div class="btn">
+                <button><p>Add</p><img src="./assets/cart-icon-white.png"></button>
+                </div> 
+            </div>
+        </div>
+        <div class="card"><p><br></p><img src='./assets/book1.png' width="200vw"><p>This was our pact</p>
+            <div class="author"><p>Ryan Andrews</p></div>
+            <div class="price-add">
+                <div class="price">
+                <p>$7.49</p>
+                </div>
+                <div class="btn">
+                <button><p>Add</p><img src="./assets/cart-icon-white.png"></button>
+                </div> 
+            </div>
+        </div>
+        <div class="card"><p><br></p><img src='./assets/book1.png' width="200vw"><p>This was our pact</p>
+            <div class="author"><p>Ryan Andrews</p></div>
+            <div class="price-add">
+                <div class="price">
+                <p>$7.49</p>
+                </div>
+                <div class="btn">
+                <button><p>Add</p><img src="./assets/cart-icon-white.png"></button>
+                </div> 
+            </div>
+        </div>
+        <div class="card"><p><br></p><img src='./assets/book1.png' width="200vw"><p>This was our pact</p>
+            <div class="author"><p>Ryan Andrews</p></div>
+            <div class="price-add">
+                <div class="price">
+                <p>$7.49</p>
+                </div>
+                <div class="btn">
+                <button><p>Add</p><img src="./assets/cart-icon-white.png"></button>
+                </div> 
+            </div>
+        </div>
+        <div class="card"><p><br></p><img src='./assets/book1.png' width="200vw"><p>This was our pact</p>
+            <div class="author"><p>Ryan Andrews</p></div>
+            <div class="price-add">
+                <div class="price">
+                <p>$7.49</p>
+                </div>
+                <div class="btn">
+                <button><p>Add</p><img src="./assets/cart-icon-white.png"></button>
+                </div> 
+            </div>
+        </div>
+    </div>
+    <div class="books">
+        <div class="card"><h2>Discover New Books</h2><img src='./assets/book1.png' width="200vw"><p>This was our pact</p>
+            <div class="author"><p>Ryan Andrews</p></div>
+            <div class="price-add">
+                <div class="price">
+                <p>$7.49</p>
+                </div>
+                <div class="btn">
+                <button><p>Add</p><img src="./assets/cart-icon-white.png"></button>
+                </div> 
+            </div>
+        </div>
+        <div class="card"><p><br></p><img src='./assets/book1.png' width="200vw"><p>This was our pact</p>
+            <div class="author"><p>Ryan Andrews</p></div>
+            <div class="price-add">
+                <div class="price">
+                <p>$7.49</p>
+                </div>
+                <div class="btn">
+                <button><p>Add</p><img src="./assets/cart-icon-white.png"></button>
+                </div> 
+            </div>
+        </div>
+        <div class="card"><p><br></p><img src='./assets/book1.png' width="200vw"><p>This was our pact</p>
+            <div class="author"><p>Ryan Andrews</p></div>
+            <div class="price-add">
+                <div class="price">
+                <p>$7.49</p>
+                </div>
+                <div class="btn">
+                <button><p>Add</p><img src="./assets/cart-icon-white.png"></button>
+                </div> 
+            </div>
+        </div>
+        <div class="card"><p><br></p><img src='./assets/book1.png' width="200vw"><p>This was our pact</p>
+            <div class="author"><p>Ryan Andrews</p></div>
+            <div class="price-add">
+                <div class="price">
+                <p>$7.49</p>
+                </div>
+                <div class="btn">
+                <button><p>Add</p><img src="./assets/cart-icon-white.png"></button>
+                </div> 
+            </div>
+        </div>
+        <div class="card"><p><br></p><img src='./assets/book1.png' width="200vw"><p>This was our pact</p>
+            <div class="author"><p>Ryan Andrews</p></div>
+            <div class="price-add">
+                <div class="price">
+                <p>$7.49</p>
+                </div>
+                <div class="btn">
+                <button><p>Add</p><img src="./assets/cart-icon-white.png"></button>
+                </div> 
+            </div>
+        </div>
+        <div class="card"><p><br></p><img src='./assets/book1.png' width="200vw"><p>This was our pact</p>
+            <div class="author"><p>Ryan Andrews</p></div>
+            <div class="price-add">
+                <div class="price">
+                <p>$7.49</p>
+                </div>
+                <div class="btn">
+                <button><p>Add</p><img src="./assets/cart-icon-white.png"></button>
+                </div> 
+            </div>
+        </div>
+    </div>
+        <div class="books">
+        <div class="card"><h2>Discover New Books</h2><img src='./assets/book1.png' width="200vw"><p>This was our pact</p>
+            <div class="author"><p>Ryan Andrews</p></div>
+            <div class="price-add">
+                <div class="price">
+                <p>$7.49</p>
+                </div>
+                <div class="btn">
+                <button><p>Add</p><img src="./assets/cart-icon-white.png"></button>
+                </div> 
+            </div>
+        </div>
+        <div class="card"><p><br></p><img src='./assets/book1.png' width="200vw"><p>This was our pact</p>
+            <div class="author"><p>Ryan Andrews</p></div>
+            <div class="price-add">
+                <div class="price">
+                <p>$7.49</p>
+                </div>
+                <div class="btn">
+                <button><p>Add</p><img src="./assets/cart-icon-white.png"></button>
+                </div> 
+            </div>
+        </div>
+        <div class="card"><p><br></p><img src='./assets/book1.png' width="200vw"><p>This was our pact</p>
+            <div class="author"><p>Ryan Andrews</p></div>
+            <div class="price-add">
+                <div class="price">
+                <p>$7.49</p>
+                </div>
+                <div class="btn">
+                <button><p>Add</p><img src="./assets/cart-icon-white.png"></button>
+                </div> 
+            </div>
+        </div>
+        <div class="card"><p><br></p><img src='./assets/book1.png' width="200vw"><p>This was our pact</p>
+            <div class="author"><p>Ryan Andrews</p></div>
+            <div class="price-add">
+                <div class="price">
+                <p>$7.49</p>
+                </div>
+                <div class="btn">
+                <button><p>Add</p><img src="./assets/cart-icon-white.png"></button>
+                </div> 
+            </div>
+        </div>
+        <div class="card"><p><br></p><img src='./assets/book1.png' width="200vw"><p>This was our pact</p>
+            <div class="author"><p>Ryan Andrews</p></div>
+            <div class="price-add">
+                <div class="price">
+                <p>$7.49</p>
+                </div>
+                <div class="btn">
+                <button><p>Add</p><img src="./assets/cart-icon-white.png"></button>
+                </div> 
+            </div>
+        </div>
+        <div class="card"><p><br></p><img src='./assets/book1.png' width="200vw"><p>This was our pact</p>
+            <div class="author"><p>Ryan Andrews</p></div>
+            <div class="price-add">
+                <div class="price">
+                <p>$7.49</p>
+                </div>
+                <div class="btn">
+                <button><p>Add</p><img src="./assets/cart-icon-white.png"></button>
+                </div> 
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>
